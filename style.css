@@ -75,13 +75,13 @@ h1 {
 .exit {
     position: absolute;
 
-    width: 60px;
-    height: 30px;
+    width: 70px;
+    height: 35px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    background: #050505;
+    color: white;
+    border: 1px solid #555;
+    cursor: pointer;
     font-size: 11px;
 }
 .start {
@@ -99,4 +99,33 @@ h1 {
 #message {
     margin-top: 20px;
     color: #888;
+}
+#fakeCursor {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+
+    border: 2px solid white;
+    transform: rotate(45deg);
+
+    pointer-events: none;
+    display: none;
+    z-index: 9999;
+}
+#jumpscare {
+    position: fixed;
+
+    inset: 0;
+
+    background: white;
+
+    display: none;
+
+    z-index: 10000;
+
+    pointer-events: none;
+}
+#jumpscare {
+    position: fixed;
+    
 }
