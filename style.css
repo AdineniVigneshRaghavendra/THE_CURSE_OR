@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+.game {
+    height: 100vh;
+    text-align: center;
+    padding-top: 30px;
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: 6px;
+    margin: 0 0 10px;
+}
+.instruction {
+    color: #777;
+    margin-bottom: 25px;
+}
+#maze {
+    position: relative;
+
+    width: 700px;
+    height: 400px;
+
+    margin: auto;
+
+    border: 1px solid #333;
+
+    background: #090909;
+}
+.wall {
+    position: absolute;
+    background: #777;
+}
+.wall1 {
+    width: 500px;
+    height: 15px;
+    left: 100px;
+    top: 70px;
+}
+.wall2 {
+    width: 15px;
+    height: 220px;
+    left: 100px;
+    top: 150px;
+}
+.wall3 {
+    width: 400px;
+    height: 15px;
+    left: 200px;
+    top: 150px;
+}
+.wall4 {
+    width: 15px;
+    height: 180px;
+    left: 585px;
+    top: 150px;
+}
+.wall5 {
+    width: 300px;
+    height: 15px;
+    left: 200px;
+    top: 315px;
+}
+.start,
+.exit {
+    position: absolute;
+
+    width: 60px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 11px;
+}
+.start {
+    left: 20px;
+    top: 30px;
+    border: 1px solid #555;
+}
+.exit {
+    right: 20px;
+    bottom: 30px;
+    border: 1px solid #555;
+
+
+}
+#message {
+    margin-top: 20px;
+    color: #888;
+}
