@@ -85,16 +85,40 @@ function reachedExit() {
         }, 1000);
         setTimeout(() => {
 
-            fakeCursor.style.transition = "top 2s ease";
+            fakeCursor.style.transition = "none";
 
-            fakeCursor.style.top = (lastMouseY + 60) + "px";
+            let moves = 0;
+
+            const berserk = setInterval(() => {
+
+                const randomX = Math.random * (window.innerWidth - 40);
+                const randomY = Math.random() * (window.innerHeight - 40);
+
+                fakeCursor.style.left = randomX + "px";
+                fakeCursor.style.top = randomY + "px";
+                fakeCursor.style.transform =
+                `rotate(${Math.random() * 360}deg)`;
+
+                moves++;
+
+                if(moves>=20)
+                {
+                    clearInterval(berserk);
+
+                    fakeCursor.style.display = "none";
+                }
+            }, 100);
+
+        
         }, 4500);
         setTimeout(() => {
-            jumpscare.style.display = "block";
+            jumpscare.style.display = "flex";
 
             setTimeout(() => {
                 jumpscare.style.display = "none";
-            }, 100);
+
+                message.textContent = "You should not have clicked EXIT.";
+            }, 700);
         }, 7000);
 
     }, 3000);
